@@ -1,0 +1,33 @@
+.navigation{    
+
+    grid-column: center-start / center-end;
+    color: $color-primary-dark-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+
+    padding: 6rem 0;
+
+    &__nav{
+        width: 35%;
+    }
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        font-family: $font-secondary;
+        font-size: 1.2rem;
+    }
+
+    &__item{
+        &:hover, &:active, &:checked{
+            color: $color-primary;
+        }
+    }
+
+    &__selected{
+        color: $color-primary;
+    }
+}
