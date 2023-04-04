@@ -2,6 +2,7 @@ import ImgPrincipal from '../assets/homepage/desktop/image-homepage-hero@2x.jpg'
 import Arrows from '../assets/arrows.png';
 import Me from '../assets/me.jpg';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
 
@@ -54,20 +55,11 @@ function HomePage() {
                         When I’m not coding, you’ll find me outdoors. I love being out in nature whether
                         that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
 
-                    <button className='about-me__button'>Go to portfolio</button>
+                    <Link to="/contact">
+                        <button className='about-me__button'>Go to portfolio</button>
+                    </Link>
                 </motion.article>
             </div>
-
-            <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className='contact-me'
-            >
-                <h4 className='contact-me__text'>Interested in doing a project together?</h4>
-                <div className='contact-me__line'></div>
-                <button className='contact-me__button'>Contact me</button>
-            </motion.div>
         </>
 
     );

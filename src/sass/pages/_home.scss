@@ -11,7 +11,7 @@
     &__heading {
         &-box {
             width: 45%;
-            background-color: #F2F2F2;
+            background-color: #FAFAFA;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -34,8 +34,8 @@
             align-items: center;
             cursor: pointer;
             width: 40%;
-            
-            &-text{
+
+            &-text {
                 text-align: center;
                 width: 100%;
                 font-size: 1.2rem;
@@ -50,21 +50,19 @@
     }
 }
 
-
-.about-me{
+.about-me {
     grid-column: center-start / center-end;
     color: $color-primary-dark-2;
     display: flex;
     margin-bottom: 15rem;
 
-    &__img{
+    &__img {
         width: 50%;
         height: 60rem;
         object-fit: cover;
     }
-    
-    &__text{
-        
+
+    &__text {
         font-size: 1.6rem;
         font-family: $font-secondary;
         width: 30%;
@@ -75,13 +73,13 @@
         line-height: 3rem;
     }
 
-    &__title{
+    &__title {
         font-size: 4rem;
         font-family: $font-primary;
         margin-bottom: 2.8rem;
     }
 
-    &__button{
+    &__button {
         text-transform: uppercase;
         font-family: $font-secondary;
         border: 1px solid $color-primary-dark-2;
@@ -89,17 +87,16 @@
         font-size: 1.2rem;
         cursor: pointer;
         margin-top: 2.8rem;
-        transition: .2s;
+        transition: 0.2s;
 
-        &:hover{
+        &:hover {
             background-color: $color-primary-dark-2;
-            color: #F2F2F2;
+            color: #FAFAFA;
         }
     }
-
 }
 
-.contact-me{
+.contact-me {
     grid-column: center-start / center-end;
     color: $color-primary-dark-2;
     display: flex;
@@ -107,33 +104,37 @@
     align-items: center;
     margin-bottom: 15rem;
 
-    &__text{
+    &__text {
         font-family: $font-primary;
         font-size: 4rem;
         line-height: 4.2rem;
         font-weight: 700;
     }
 
-    &__line{
+    &__line {
         width: 90%;
         height: 1px;
         margin: 0 3rem;
         background-color: rgba($color: $color-primary-dark-2, $alpha: 0.15);
     }
 
-    &__button{
+    &__line + a {
+        flex-shrink: 0;
+    }
+
+    &__button {
         text-transform: uppercase;
+        background-color: #FAFAFA;
         font-family: $font-secondary;
         border: 1px solid $color-primary-dark-2;
         padding: 1.7rem 3rem;
         font-size: 1.2rem;
-        flex-shrink: 0;
         cursor: pointer;
-        transition: .2s;
+        transition: 0.2s;
 
-        &:hover{
+        &:hover {
             background-color: $color-primary-dark-2;
-            color: #F2F2F2;
+            color: #FAFAFA;
         }
     }
 }
