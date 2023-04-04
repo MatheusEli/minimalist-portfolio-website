@@ -8,26 +8,39 @@ import ContactPage from "./pages/ContactPage";
 
 function App() {
     return (
-        <Router>
-            <div className="container">
-                <Navbar />
-                <Switch>
-                    <Route exact path="/">
-                        <HomePage />
-                    </Route>
+        <>
+            <div className="page-bg"></div>
 
-                    <Route exact path="/portfolio">
-                        <PortfolioPage />
-                    </Route>
-
-                    <Route exact path="/contact">
-                        <ContactPage />
-                    </Route>
-                </Switch>
-
-                <Footer />
+            <div className="animation-wrapper">
+                <div className="particle particle-1"></div>
+                <div className="particle particle-2"></div>
+                <div className="particle particle-3"></div>
+                <div className="particle particle-4"></div>
             </div>
-        </Router>
+
+            <div className="page-wrapper"></div>
+            <Router>
+                <div className="container">
+                    <Navbar />
+                    <Switch>
+                        <Route exact path="/">
+                            <HomePage />
+                        </Route>
+
+                        <Route exact path="/portfolio">
+                            <PortfolioPage />
+                        </Route>
+
+                        <Route exact path="/contact">
+                            <ContactPage />
+                        </Route>
+                    </Switch>
+
+                    <Footer />
+                </div>
+            </Router>
+
+        </>
     );
 }
 
