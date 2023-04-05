@@ -3,6 +3,7 @@ import Arrows from '../assets/arrows.png';
 import Me from '../assets/me.jpg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import ContactMeRow from '../components/ContactMeRow';
 
 function HomePage() {
 
@@ -60,6 +61,8 @@ function HomePage() {
                     </Link>
                 </motion.article>
             </div>
+
+            <ContactMeRow />
         </>
 
     );

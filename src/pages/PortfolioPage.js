@@ -1,10 +1,14 @@
 import ProjectsList from "../components/ProjectsList";
+import ContactMeRow from "../components/ContactMeRow";
 
-function PortfolioPage(){
+function PortfolioPage() {
     return (
-    <div className="portfolio">
-        <ProjectsList />
-    </div>
+        <>
+            <div className="portfolio">
+                <ProjectsList />
+            </div>
+            <ContactMeRow />
+        </>
     );
 }
 

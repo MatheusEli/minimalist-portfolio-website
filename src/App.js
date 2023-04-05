@@ -5,10 +5,11 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import PortfolioPage from "./pages/PortfolioPage";
 import ContactPage from "./pages/ContactPage";
-import ContactMeRow from "./components/ContactMeRow";
 import ProjectDetails from "./components/ProjectsDetails";
 
 function App() {
+
+
     return (
         <>
             <div className="page-bg"></div>
@@ -42,8 +43,6 @@ function App() {
                             <ProjectDetails />
                         </Route>
                     </Switch>
-
-                    <ContactMeRow />
 
                     <Footer />
                 </div>
