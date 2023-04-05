@@ -1,3 +1,102 @@
-.contact{
+.contact {
     grid-column: center-start / center-end;
+    margin-bottom: 10.9rem;
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        color: $color-primary-dark-2;
+    }
+
+    &__text {
+        font-family: $font-secondary;
+        color: $color-primary-dark-2;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+
+    &__icons-list {
+        display: flex;
+        list-style: none;
+        margin-top: 2.4rem;
+    }
+
+    &__icons-item {
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__content-box {
+        padding: 4.8rem 0;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba($color-primary-dark-2, 0.15);
+    }
+
+    &__text-box {
+        width: 56%;
+    }
+}
+
+.form {
+    width: 56%;
+    
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: $font-secondary;
+        line-height: 3rem;
+        color: $color-primary-dark-2;
+    }
+    
+    &__input {
+        background-color: rgba($color-primary-dark-2, 0.1);
+        color: $color-primary-dark-2;
+        padding: 1.4rem;
+        font-size: 1.3rem;
+        font-family: $font-secondary;
+        border: none;
+        margin-bottom: 2.4rem;
+        
+        &::placeholder{
+            font-size: 1.3rem;
+            color: rgba($color-primary-dark-2, 0.4);
+        }
+
+        &:focus-visible{
+            outline: none;
+        }
+
+    }
+
+    textarea{
+        height: 9.6rem;
+    }
+
+    &__button{
+        text-transform: uppercase;
+        background-color: $color-primary-dark-2;
+        color: #FAFAFA;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: $font-secondary;
+        padding: 1.7rem 0;
+        cursor: pointer;
+        width: 30%;
+        transition: .2s;
+        border: 1px solid $color-primary-dark-2;
+
+        &:hover{
+            background-color: #FAFAFA;
+            color: $color-primary-dark-2;
+            border: 1px solid $color-primary-dark-2;
+        }
+    }
 }
