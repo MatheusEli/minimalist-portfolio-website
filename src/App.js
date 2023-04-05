@@ -38,7 +38,7 @@ function App() {
                             <ContactPage />
                         </Route>
 
-                        <Route exact path="/portfolio-details/:id">
+                        <Route exact path="/portfolio-details/:slug">
                             <ProjectDetails />
                         </Route>
                     </Switch>

@@ -3,11 +3,13 @@ import BookmarkProject from '../assets/portfolio/desktop/image-portfolio-bookmar
 import InsureProject from '../assets/portfolio/desktop/image-portfolio-insure@2x.jpg';
 import FyloProject from '../assets/portfolio/desktop/image-portfolio-fylo@2x.jpg';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function ProjectsList() {
 
     const projects = [
         {
+            slug: "manage",
             img: ManageProject,
             title: "Manage",
             text: "This project required me to build a fully responsive" +
@@ -16,6 +18,7 @@ function ProjectsList() {
                 "required interactivity, such as the testimonial slider."
         },
         {
+            slug: "bookmark",
             img: BookmarkProject,
             title: "Bookmark",
             text: "This project required me to build a fully" +
@@ -25,6 +28,7 @@ function ProjectsList() {
                 "as the features section."
         },
         {
+            slug: "insure",
             img: InsureProject,
             title: "Insure",
             text: "This was a small project which mostly" +
@@ -35,6 +39,7 @@ function ProjectsList() {
                 "of the mobile navigation."
         },
         {
+            slug: "fylo",
             img: FyloProject,
             title: "Fylo",
             text: "This project was built in pure HTML and CSS." +
@@ -67,7 +72,10 @@ function ProjectsList() {
                             >
                                 <h2 className='project__title'>{project.title}</h2>
                                 <p>{project.text}</p>
-                                <button className='project__button'>View Project</button>
+
+                                <Link to={`portfolio-details/${project.slug}`}>
+                                    <button className='project__button'>View Project</button>
+                                </Link>
                             </motion.article>
                         </li>
                     );
