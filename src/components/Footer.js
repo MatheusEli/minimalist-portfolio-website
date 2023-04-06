@@ -32,17 +32,23 @@ function Footer() {
                     <ul className='footer__icons-list'>
                         <a target='_blank' href='https://github.com/MatheusEli'>
                             <li className='footer__icons-item'>
-                                <img className='footer__icons-img' src={GithubIcon} alt='Github icon' />
+                                <a target='_blank' href="https://github.com/MatheusEli">
+                                    <img className='footer__icons-img' src={GithubIcon} alt='Github icon' />
+                                </a>
                             </li>
                         </a>
                         <a target='_blank' href='https://twitter.com/MatheusEli99'>
                             <li className='footer__icons-item'>
-                                <img className='footer__icons-img' src={TwitterIcon} alt='Twitter icon' />
+                                <a target='_blank' href="https://twitter.com/MatheusEli99">
+                                    <img className='footer__icons-img' src={TwitterIcon} alt='Twitter icon' />
+                                </a>
                             </li>
                         </a>
                         <a target='_blank' href='https://www.linkedin.com/in/matheus-eli-ferreira/'>
                             <li className='footer__icons-item'>
-                                <img className='footer__icons-img' src={LinkedinIcon} alt='Linkedin icon' />
+                                <a target='_blank' href="https://www.linkedin.com/in/matheus-eli-ferreira/">
+                                    <img className='footer__icons-img' src={LinkedinIcon} alt='Linkedin icon' />
+                                </a>
                             </li>
                         </a>
                     </ul>
