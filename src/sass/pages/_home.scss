@@ -1,141 +1,192 @@
 .header {
-    grid-column: center-start / center-end;
-    position: relative;
-    margin-bottom: 15rem;
+  grid-column: center-start / center-end;
+  position: relative;
+  margin-bottom: 15rem;
 
-    &__img-principal {
+  @include respond(tab-port) {
+    margin-bottom: 9.6rem;
+  }
+
+  &__img-principal {
+    width: 100%;
+    object-fit: cover;
+
+    @include respond(tab-port) {
+      height: 45vh;
+    }
+  }
+
+  &__heading {
+    &-box {
+      width: 45%;
+      background-color: #fafafa;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 4rem 4rem 0 0;
+
+      @include respond(tab-port) {
+        width: 70%;
+      }
+    }
+
+    &-text {
+      font-size: 5rem;
+      font-family: $font-primary;
+      color: $color-primary-dark-2;
+      margin-bottom: 5rem;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    &-button {
+      font-family: $font-secondary;
+      background-color: $color-primary-dark-1;
+      text-transform: uppercase;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 40%;
+
+      &-text {
+        text-align: center;
         width: 100%;
-        object-fit: cover;
+        font-size: 1.2rem;
+        font-weight: 200;
+      }
     }
+  }
 
-    &__heading {
-        &-box {
-            width: 45%;
-            background-color: #FAFAFA;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 4rem 4rem 0 0;
-        }
-
-        &-text {
-            font-size: 5rem;
-            font-family: $font-primary;
-            color: $color-primary-dark-2;
-            margin-bottom: 5rem;
-        }
-
-        &-button {
-            font-family: $font-secondary;
-            background-color: $color-primary-dark-1;
-            text-transform: uppercase;
-            color: $color-white;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            width: 40%;
-
-            &-text {
-                text-align: center;
-                width: 100%;
-                font-size: 1.2rem;
-                font-weight: 200;
-            }
-        }
-    }
-
-    &__arrows-box {
-        background-color: $color-primary-dark-2;
-        padding: 1.5rem;
-    }
+  &__arrows-box {
+    background-color: $color-primary-dark-2;
+    padding: 1.5rem;
+  }
 }
 
 .about-me {
-    grid-column: center-start / center-end;
-    color: $color-primary-dark-2;
-    display: flex;
-    margin-bottom: 15rem;
+  grid-column: center-start / center-end;
+  color: $color-primary-dark-2;
+  display: flex;
+  margin-bottom: 15rem;
 
-    &__img {
-        width: 50%;
-        height: 60rem;
-        object-fit: cover;
+  @include respond(tab-port) {
+    margin-bottom: 9.6rem;
+  }
+
+  &__img {
+    width: 50%;
+    height: 60rem;
+    object-fit: cover;
+
+    @include respond(tab-port) {
+      width: 40%;
     }
+  }
 
-    &__text {
-        font-size: 1.6rem;
-        font-family: $font-secondary;
-        width: 30%;
-        border-top: 1px solid rgba($color: $color-primary-dark-2, $alpha: 0.15);
-        border-bottom: 1px solid rgba($color: $color-primary-dark-2, $alpha: 0.15);
-        padding: 5rem 0 0 0;
-        margin: 0 auto;
-        line-height: 3rem;
+  &__text {
+    font-size: 1.6rem;
+    font-family: $font-secondary;
+    width: 30%;
+    border-top: 1px solid rgba($color: $color-primary-dark-2, $alpha: 0.15);
+    border-bottom: 1px solid rgba($color: $color-primary-dark-2, $alpha: 0.15);
+    padding: 5rem 0 0 0;
+    margin: 0 auto;
+    line-height: 3rem;
+
+    @include respond(tab-port) {
+      width: 50%;
+      margin-right: 0;
+
+      p {
+        width: 85%;
+      }
     }
+  }
 
-    &__title {
-        font-size: 4rem;
-        font-family: $font-primary;
-        margin-bottom: 2.8rem;
+  &__title {
+    font-size: 4rem;
+    font-family: $font-primary;
+    margin-bottom: 2.8rem;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
     }
+  }
 
-    &__button {
-        text-transform: uppercase;
-        font-family: $font-secondary;
-        border: 1px solid $color-primary-dark-2;
-        background-color: #FAFAFA;
-        padding: 1.7rem 3rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        margin-top: 2.8rem;
-        transition: 0.2s;
+  &__button {
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    border: 1px solid $color-primary-dark-2;
+    background-color: #fafafa;
+    padding: 1.7rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 2.8rem;
+    transition: 0.2s;
 
-        &:hover {
-            background-color: $color-primary-dark-2;
-            color: #FAFAFA;
-        }
+    &:hover {
+      background-color: $color-primary-dark-2;
+      color: #fafafa;
     }
+  }
 }
 
 .contact-me {
-    grid-column: center-start / center-end;
-    color: $color-primary-dark-2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15rem;
+  grid-column: center-start / center-end;
+  color: $color-primary-dark-2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rem;
 
-    &__text {
-        font-family: $font-primary;
-        font-size: 4rem;
-        line-height: 4.2rem;
-        font-weight: 700;
+  @include respond(tab-port){
+    margin-bottom: 9.6rem;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    font-weight: 700;
+  }
+
+  &__line {
+    width: 90%;
+    height: 1px;
+    margin: 0 3rem;
+    background-color: rgba($color: $color-primary-dark-2, $alpha: 0.15);
+
+    @include respond(tab-port) {
+      width: 30%;
+    }
+  }
+
+  &__line + a {
+    flex-shrink: 0;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    background-color: #fafafa;
+    font-family: $font-secondary;
+    border: 1px solid $color-primary-dark-2;
+    padding: 1.7rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $color-primary-dark-2;
+      color: #fafafa;
     }
 
-    &__line {
-        width: 90%;
-        height: 1px;
-        margin: 0 3rem;
-        background-color: rgba($color: $color-primary-dark-2, $alpha: 0.15);
+    @include respond(tab-port) {
+      width: 16.2rem;
+      font-size: 1.4rem;
     }
-
-    &__line + a {
-        flex-shrink: 0;
-    }
-
-    &__button {
-        text-transform: uppercase;
-        background-color: #FAFAFA;
-        font-family: $font-secondary;
-        border: 1px solid $color-primary-dark-2;
-        padding: 1.7rem 3rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: 0.2s;
-
-        &:hover {
-            background-color: $color-primary-dark-2;
-            color: #FAFAFA;
-        }
-    }
+  }
 }
