@@ -1,33 +1,77 @@
-.navigation{    
-
+.navigation {
     grid-column: center-start / center-end;
     color: $color-primary-dark-2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-
+    position: relative;
     padding: 6rem 0;
 
-    &__nav{
+    &__nav {
         width: 35%;
     }
-    &__list{
+    &__list {
         list-style: none;
         display: flex;
         justify-content: space-between;
 
         font-family: $font-secondary;
         font-size: 1.2rem;
-    }
 
-    &__item{
-        &:hover, &:active, &:checked{
-            color: $color-primary;
+        @include respond(phone) {
+            background-color: $color-primary-dark-1;
+            position: absolute;
+            z-index: 999;
+            right: 0;
+            top: 80%;
+            color: #ffff;
+            flex-direction: column;
+            padding: 2rem 4rem;
+            justify-content: center;
+            align-items: center;
+            width: 22.3rem;
+            letter-spacing: 2px;
         }
     }
 
-    &__selected{
+    &__item {
+        &:hover,
+        &:active,
+        &:checked {
+            color: $color-primary;
+        }
+
+        @include respond(phone) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__selected {
         color: $color-primary;
+    }
+}
+
+.active {
+    @include respond(phone) {
+        display: block;
+    }
+}
+
+.disabled {
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.hamgurguer-button {
+    display: none;
+
+    @include respond(phone) {
+        display: inline-block;
+        margin-left: 50%;
+        position: absolute;
+        right: 0;
+        top: 45%;
     }
 }

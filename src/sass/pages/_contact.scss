@@ -1,11 +1,19 @@
 .contact {
     grid-column: center-start / center-end;
     margin-bottom: 10.9rem;
+
+    @include respond(tab-port){
+        margin-bottom: 9.6rem;
+    }
     &__title {
         font-size: 4rem;
         font-weight: 700;
         font-family: $font-primary;
         color: $color-primary-dark-2;
+
+        @include respond(tab-port){
+            margin-bottom: 2.8rem;
+        }
     }
 
     &__text {
@@ -14,6 +22,11 @@
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 3rem;
+        opacity: .8;
+
+        @include respond(tab-port){
+            font-size: 1.5rem;
+        }
     }
 
     &__icons-list {
@@ -31,16 +44,28 @@
         padding: 4.8rem 0;
         display: flex;
         justify-content: space-between;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
         border-top: 1px solid rgba($color-primary-dark-2, 0.15);
     }
 
     &__text-box {
         width: 56%;
+
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 }
 
 .form {
     width: 56%;
+
+    @include respond(tab-port){
+        width: 100%;
+    }
     
 
     &__box {
@@ -81,15 +106,16 @@
     }
 
     &__button{
+        width: 20rem;
         text-transform: uppercase;
-        background-color: $color-primary-dark-2;
+        background-color: $color-primary-dark-1;
         color: #FAFAFA;
         font-size: 1.2rem;
-        font-weight: 400;
+        letter-spacing: 2px;
+        font-weight: 200;
         font-family: $font-secondary;
         padding: 1.7rem 0;
         cursor: pointer;
-        width: 30%;
         transition: .2s;
         border: 1px solid $color-primary-dark-2;
 

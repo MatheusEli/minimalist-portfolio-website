@@ -102,6 +102,10 @@
   grid-column: center-start / center-end;
   margin-bottom: 11.5rem;
 
+  @include respond(tab-port){
+    margin-bottom: 9.6rem
+  }
+
   &__box {
     display: flex;
     align-items: flex-start;
@@ -132,13 +136,25 @@
     border-bottom: 1px solid rgba($color: $color-primary-dark-2, $alpha: 0.15);
     padding: 4.8rem 0;
     line-height: 3rem;
+    color: $color-primary-dark-2;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
+    p {
+      opacity: 0.8;
+    }
+
     @include respond(tab-port) {
       width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      p {
+        font-size: 1.5rem;
+        width: 50%;
+      }
     }
   }
 
@@ -150,7 +166,7 @@
     }
 
     p {
-      @include respond(tab-port ) {
+      @include respond(tab-port) {
         width: 50%;
       }
     }
@@ -180,11 +196,20 @@
       background-color: $color-primary-dark-2;
       color: #fafafa;
     }
+
+    @include respond(tab-port){
+      margin-top: -4rem;
+    }
   }
 
   &__background {
     &-box {
       width: 60%;
+
+      @include respond(tab-port) {
+        width: 100%;
+        margin-top: 4.8rem;
+      }
     }
 
     &-title {
@@ -192,6 +217,10 @@
       font-family: $font-primary;
       color: $color-primary-dark-2;
       font-weight: 400;
+
+      @include respond(tab-port){
+        margin-bottom: 2.8rem;
+      }
     }
 
     &-text {
@@ -199,12 +228,24 @@
       font-family: $font-secondary;
       line-height: 3rem;
       margin-bottom: 4rem;
+      color: $color-primary-dark-2;
+      opacity: 0.8;
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+        width: 90%;
+      }
     }
   }
 
   &__previews {
     &-img {
       width: 100%;
+
+      @include respond(tab-port) {
+        height: 43rem;
+        object-fit: cover;
+      }
+
       margin-top: 2.8rem;
     }
     &-title {

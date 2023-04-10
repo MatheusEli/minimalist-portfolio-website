@@ -15,6 +15,7 @@ import FyloProjectPreview1 from "../assets/detail/desktop/image-fylo-preview-1@2
 import FyloProjectPreview2 from "../assets/detail/desktop/image-fylo-preview-2@2x.jpg";
 
 import { useParams } from "react-router-dom";
+import ContactMeRow from "./ContactMeRow";
 
 function ProjectDetails() {
   const { slug } = useParams();
@@ -119,46 +120,49 @@ function ProjectDetails() {
   const project = projects.find((project) => project.slug === slug);
 
   return (
-    <div className="project-details">
-      <div className="project-details__header">
-        <img src={project.mainImg} alt="" className="project-details__img" />
-      </div>
 
-      <main className="project-details__box">
-        <article className="project-details__text">
-          <div className='project-details__content'>
+    <>
+
+      <div className="project-details">
+        <div className="project-details__header">
+          <img src={project.mainImg} alt="" className="project-details__img" />
+        </div>
+
+        <main className="project-details__box">
+          <article className="project-details__text">
             <h2 className="project-details__title">{project.title}</h2>
             <p>{project.text}</p>
-          </div>
-          <button className="project-details__button">Visit website</button>
-        </article>
-
-        <div className="project-details__background-box">
-          <article className="project-details__background">
-            <h3 className="project-details__background-title">
-              Project Background
-            </h3>
-            <p className="project-details__background-text">
-              {project.backgroundDescription}
-            </p>
+            <button className="project-details__button">Visit website</button>
           </article>
 
-          <section className="project-details__previews">
-            <h3 className="project-details__previews-title">Static Previews</h3>
-            <img
-              className="project-details__previews-img"
-              src={project.previewImg1}
-              alt=""
-            />
-            <img
-              className="project-details__previews-img"
-              src={project.previewImg2}
-              alt=""
-            />
-          </section>
-        </div>
-      </main>
-    </div>
+          <div className="project-details__background-box">
+            <article className="project-details__background">
+              <h3 className="project-details__background-title">
+                Project Background
+              </h3>
+              <p className="project-details__background-text">
+                {project.backgroundDescription}
+              </p>
+            </article>
+
+            <section className="project-details__previews">
+              <h3 className="project-details__previews-title">Static Previews</h3>
+              <img
+                className="project-details__previews-img"
+                src={project.previewImg1}
+                alt=""
+              />
+              <img
+                className="project-details__previews-img"
+                src={project.previewImg2}
+                alt=""
+              />
+            </section>
+          </div>
+        </main>
+      </div>
+      <ContactMeRow />
+    </>
   );
 }
 

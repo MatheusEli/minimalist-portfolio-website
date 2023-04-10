@@ -8,27 +8,30 @@
   text-transform: uppercase;
   padding: 2.5rem 0;
 
+  
   display: grid;
   grid-template-columns:
-    [full-start] minmax(13rem, 1fr) [center-start] repeat(
-      6,
-      [col-start] minmax(min-content, 19rem) [col-end]
-    )
-    [center-end] minmax(13rem, 1fr) [full-end];
-
+  [full-start] minmax(13rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 19rem) [col-end])
+  [center-end] minmax(13rem, 1fr) [full-end];
+  
   @include respond(tab-port) {
     grid-template-columns:
-      [full-start] minmax(4rem, 1fr) [center-start] repeat(
-        6,
-        [col-start] minmax(min-content, 19rem) [col-end]
-      )
-      [center-end] minmax(4rem, 1fr) [full-end];
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 19rem) [col-end])
+    [center-end] minmax(4rem, 1fr) [full-end];
+  }
+  
+  @include respond(phone){
+    padding: 5.6rem 0;
   }
 
   &__box {
     grid-column: center-start / center-end;
     display: flex;
     align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
   &__nav,
   &__list,
@@ -36,6 +39,13 @@
     display: flex;
     list-style: none;
     align-items: center;
+  }
+
+  &__nav,
+  &__list {
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__nav {
@@ -51,6 +61,15 @@
       width: 50%;
       margin-left: 4rem;
     }
+
+    @include respond(phone){
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item{
+    margin: 2.4rem 0;
   }
 
   &__icons {
@@ -61,6 +80,16 @@
       @include respond(tab-port) {
         width: 17%;
       }
+
+      @include respond(phone){
+        width: 20%;
+      }
+    }
+  }
+
+  &__logo{
+    @include respond(phone){
+      margin-bottom: 2rem;
     }
   }
 }

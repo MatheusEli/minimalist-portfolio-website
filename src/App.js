@@ -9,7 +9,6 @@ import ProjectDetails from "./components/ProjectsDetails";
 
 function App() {
 
-
     return (
         <>
             <div className="page-bg"></div>
@@ -24,8 +23,10 @@ function App() {
             <div className="page-wrapper"></div>
             <Router>
                 <div className="container">
+
+
                     <Navbar />
-                    
+
                     <Switch>
                         <Route exact path="/">
                             <HomePage />
