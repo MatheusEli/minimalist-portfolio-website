@@ -2,8 +2,8 @@ import ManageProject from '../assets/portfolio/desktop/image-portfolio-manage@2x
 import BookmarkProject from '../assets/portfolio/desktop/image-portfolio-bookmark@2x.jpg';
 import InsureProject from '../assets/portfolio/desktop/image-portfolio-insure@2x.jpg';
 import FyloProject from '../assets/portfolio/desktop/image-portfolio-fylo@2x.jpg';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import ProjectsItem from './ProjectsItem';
+
 
 function ProjectsList() {
 
@@ -51,66 +51,12 @@ function ProjectsList() {
         }
     ];
 
-    const isMobile = window.innerWidth < 768;
-
-    const setContent = (project) => {
-        if (isMobile) {
-            return (
-                <>
-                    <img
-                        src={project.img}
-                        alt="Project Image"
-                        className="project__img"
-                    />
-                    <article
-                        className='project__text'
-                    >
-                        <h2 className='project__title'>{project.title}</h2>
-                        <p>{project.text}</p>
-
-                        <Link to={`portfolio-details/${project.slug}`}>
-                            <button className='project__button'>View Project</button>
-                        </Link>
-                    </article>
-                </>
-            );
-        } else {
-            return (
-                <>
-                    <motion.img
-                        initial={{ opacity: 0, x: -100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1 }}
-                        src={project.img}
-                        alt=""
-                        className="project__img"
-                    />
-                    <motion.article
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1 }}
-                        className='project__text'
-                    >
-                        <h2 className='project__title'>{project.title}</h2>
-                        <p>{project.text}</p>
-
-                        <Link to={`portfolio-details/${project.slug}`}>
-                            <button className='project__button'>View Project</button>
-                        </Link>
-                    </motion.article>
-                </>
-            );
-        }
-    }
-
     return (
         <ul className="projects__list">
             {
                 projects.map((project, index) => {
                     return (
-                        <li key={index} className="projects__item">
-                            {setContent(project)}
-                        </li>
+                        <ProjectsItem key={index} project={project} />
                     );
                 })
             }
