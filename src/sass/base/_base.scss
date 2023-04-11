@@ -59,6 +59,15 @@ a {
       )
       [center-end] minmax(4rem, 1fr) [full-end];
   }
+
+  @include respond(phone) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        6,
+        [col-start] minmax(min-content, 19rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
 }
 
 .page-bg,

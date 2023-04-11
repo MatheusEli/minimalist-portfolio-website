@@ -17,6 +17,12 @@
       align-items: center;
     }
 
+    
+    @include respond(phone){
+      flex-direction: column; 
+      margin-bottom: 7.2rem;
+    }
+
     &:nth-child(odd) {
       .project__img {
         order: 0;
@@ -26,6 +32,12 @@
     &:nth-child(even) {
       .project__img {
         order: 1;
+      }
+
+      @include respond(phone){
+        .project__img {
+          order: 0;
+        }
       }
     }
   }
@@ -40,6 +52,12 @@
 
     @include respond(tab-port) {
       height: 31rem;
+    }
+
+    @include respond(phone){
+      height: 28.8rem;
+      width: 100%;
+      margin-bottom: 3.2rem;
     }
   }
 
@@ -68,6 +86,12 @@
       font-size: 1.5rem;
       margin: 0;
     }
+
+    @include respond(phone){
+      width: 100%;
+      padding: 3.2rem 0;
+    }
+
   }
 
   &__title {
@@ -126,6 +150,10 @@
       height: 31rem;
       margin-bottom: 4rem;
     }
+
+    @include respond(phone){
+      height: 14rem;
+    }
   }
 
   &__text {
@@ -156,6 +184,15 @@
         width: 50%;
       }
     }
+
+    @include respond(phone){
+      flex-direction: column;
+      padding: 2.4rem 0;
+
+      p {
+        width: 100%;
+      }
+    }
   }
 
   &__content {
@@ -168,6 +205,10 @@
     p {
       @include respond(tab-port) {
         width: 50%;
+      }
+
+      @include respond(phone){
+        width: 100%;
       }
     }
   }
@@ -199,6 +240,10 @@
 
     @include respond(tab-port){
       margin-top: -4rem;
+    }
+
+    @include respond(phone){
+      margin-top: 2.4rem;
     }
   }
 
@@ -234,6 +279,10 @@
         font-size: 1.5rem;
         width: 90%;
       }
+
+      @include respond(phone){
+        width: 100%;
+      }
     }
   }
 
@@ -244,6 +293,10 @@
       @include respond(tab-port) {
         height: 43rem;
         object-fit: cover;
+      }
+
+      @include respond(phone){
+        height: 19.7rem;
       }
 
       margin-top: 2.8rem;
