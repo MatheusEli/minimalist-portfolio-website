@@ -23,10 +23,7 @@ function App() {
             <div className="page-wrapper"></div>
             <Router>
                 <div className="container">
-
-
                     <Navbar />
-
                     <Switch>
                         <Route exact path="/">
                             <HomePage />
@@ -44,7 +41,6 @@ function App() {
                             <ProjectDetails />
                         </Route>
                     </Switch>
-
                     <Footer />
                 </div>
             </Router>

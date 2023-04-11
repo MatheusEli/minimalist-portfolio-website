@@ -7,11 +7,13 @@ function Navbar() {
 
     const [isOpen, setOpen] = useState(false);
 
-    const toggle = isOpen ?  'active' : 'disabled';
+    const toggle = isOpen ? 'active' : 'disabled';
 
     return (
         <div className='navigation'>
-            <img src={Logo} alt='Logo Portfolio' className='navigation__logo' />
+            <Link to="/">
+                <img src={Logo} alt='Logo Portfolio' className='navigation__logo' />
+            </Link>
             <nav className='navigation__nav'>
                 <MenuButton
                     isOpen={isOpen}

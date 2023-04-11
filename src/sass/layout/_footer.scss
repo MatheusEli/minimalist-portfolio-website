@@ -11,8 +11,8 @@
   
   display: grid;
   grid-template-columns:
-  [full-start] minmax(13rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 19rem) [col-end])
-  [center-end] minmax(13rem, 1fr) [full-end];
+  [full-start] minmax(5rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 19rem) [col-end])
+  [center-end] minmax(5rem, 1fr) [full-end];
   
   @include respond(tab-port) {
     grid-template-columns:
@@ -54,7 +54,7 @@
   }
 
   &__list {
-    width: 30%;
+    width: 30.9rem;
     justify-content: space-around;
 
     @include respond(tab-port) {
@@ -74,15 +74,15 @@
 
   &__icons {
     &-list {
-      width: 8%;
+      width: 10.4rem;
       justify-content: space-between;
 
       @include respond(tab-port) {
-        width: 17%;
+        width: 20%;
       }
 
       @include respond(phone){
-        width: 40%;
+        width: 10.4rem;
       }
     }
   }
