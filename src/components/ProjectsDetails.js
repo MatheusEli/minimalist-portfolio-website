@@ -125,7 +125,7 @@ function ProjectDetails() {
 
       <div className="project-details">
         <div className="project-details__header">
-          <img src={project.mainImg} alt="" className="project-details__img" />
+          <img src={project.mainImg} alt="Project Main Image" className="project-details__img" />
         </div>
 
         <main className="project-details__box">
@@ -150,12 +150,12 @@ function ProjectDetails() {
               <img
                 className="project-details__previews-img"
                 src={project.previewImg1}
-                alt=""
+                alt="Project Preview Image 1"
               />
               <img
                 className="project-details__previews-img"
                 src={project.previewImg2}
-                alt=""
+                alt="Project Preview Image 2"
               />
             </section>
           </div>

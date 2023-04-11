@@ -59,7 +59,7 @@ function ProjectsList() {
                 <>
                     <img
                         src={project.img}
-                        alt=""
+                        alt="Project Image"
                         className="project__img"
                     />
                     <article

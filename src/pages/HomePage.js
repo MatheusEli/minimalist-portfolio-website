@@ -15,21 +15,15 @@ function HomePage() {
         content = (
             <>
                 <div className="header">
-                    <img src={ImgPrincipal} className="header__img-principal" />
+                    <img src={ImgPrincipal} className="header__img-principal" alt="Main" />
                     <div className="header__heading-box">
                         <h2
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
                             className="header__heading-text"
                         >Hey, I'm Matheus Eli and I love building beautiful websites</h2>
                         <div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1.3 }}
                             className="header__heading-button">
                             <div className='header__arrows-box'>
-                                <img className='header__arrows-img' src={Arrows} />
+                                <img className='header__arrows-img' src={Arrows} alt="Button icon" />
                             </div>
                             <span className='header__heading-button-text'>About me</span>
                         </div>
@@ -39,17 +33,11 @@ function HomePage() {
 
                 <div className="about-me">
                     <img
-                        initial={{ opacity: 0, x: -100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1 }}
                         src={Me}
                         alt='Me'
                         className='about-me__img'
                     />
                     <article
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1 }}
                         className='about-me__text'
                     >
                         <h2 className='about-me__title'>About me</h2>
@@ -60,7 +48,7 @@ function HomePage() {
                             When I’m not coding, you’ll find me outdoors. I love being out in nature whether
                             that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
 
-                        <Link to="/contact">
+                        <Link to="/portfolio">
                             <button className='about-me__button'>Go to portfolio</button>
                         </Link>
                     </article>
@@ -71,7 +59,7 @@ function HomePage() {
         content = (
             <>
                 <div className="header">
-                    <img src={ImgPrincipal} className="header__img-principal" />
+                    <img src={ImgPrincipal} className="header__img-principal" alt="Main" />
                     <div className="header__heading-box">
                         <motion.h2
                             initial={{ opacity: 0, y: 100 }}
@@ -85,7 +73,7 @@ function HomePage() {
                             transition={{ duration: 1.3 }}
                             className="header__heading-button">
                             <div className='header__arrows-box'>
-                                <img className='header__arrows-img' src={Arrows} />
+                                <img className='header__arrows-img' src={Arrows} alt="Button icon" />
                             </div>
                             <span className='header__heading-button-text'>About me</span>
                         </motion.div>
