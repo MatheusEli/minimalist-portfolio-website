@@ -1,4 +1,5 @@
 import ImgPrincipal from '../assets/homepage/desktop/image-homepage-hero@2x.jpg';
+import ImgPrincipalMobile from '../assets/homepage/mobile/image-homepage-hero@2x.jpg';
 import Arrows from '../assets/arrows.png';
 import Me from '../assets/me.jpg';
 import { motion } from 'framer-motion';
@@ -11,11 +12,23 @@ function HomePage() {
 
     const isMobile = window.innerWidth < 768;
 
+    const renderedResponsiveImgs = () => {
+        return (
+            <picture>
+                <source srcSet={ImgPrincipal} media="(min-width: 1280px)" />
+                <source srcSet={ImgPrincipalMobile} media="(max-width: 768px)" />
+                <img src={ImgPrincipal} alt="Main" className="header__img-principal" />
+            </picture>
+        );
+    }
+
     if (isMobile) {
         content = (
             <>
                 <div className="header">
-                    <img src={ImgPrincipal} className="header__img-principal" alt="Main" />
+                    {
+                        renderedResponsiveImgs()
+                    }
                     <div className="header__heading-box">
                         <h2
                             className="header__heading-text"
@@ -59,7 +72,9 @@ function HomePage() {
         content = (
             <>
                 <div className="header">
-                    <img src={ImgPrincipal} className="header__img-principal" alt="Main" />
+                    {
+                        renderedResponsiveImgs()
+                    }
                     <div className="header__heading-box">
                         <motion.h2
                             initial={{ opacity: 0, y: 100 }}
@@ -104,7 +119,7 @@ function HomePage() {
                             When I’m not coding, you’ll find me outdoors. I love being out in nature whether
                             that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
 
-                        <Link to="/contact">
+                        <Link to="/portfolio">
                             <button className='about-me__button'>Go to portfolio</button>
                         </Link>
                     </motion.article>
