@@ -10,9 +10,6 @@ import InsureProject from "../assets/detail/desktop/image-insure-hero@2x.jpg";
 import InsureProjectPreview1 from "../assets/detail/desktop/image-insure-preview-1@2x.jpg";
 import InsureProjectPreview2 from "../assets/detail/desktop/image-insure-preview-2@2x.jpg";
 
-import FyloProject from "../assets/detail/desktop/image-fylo-hero@2x.jpg";
-import FyloProjectPreview1 from "../assets/detail/desktop/image-fylo-preview-1@2x.jpg";
-import FyloProjectPreview2 from "../assets/detail/desktop/image-fylo-preview-2@2x.jpg";
 
 import { useParams } from "react-router-dom";
 import ContactMeRow from "./ContactMeRow";
@@ -22,11 +19,11 @@ function ProjectDetails() {
 
   const projects = [
     {
-      slug: "manage",
+      slug: "natours",
       mainImg: ManageProject,
       previewImg1: ManageProjectPreview1,
       previewImg2: ManageProjectPreview2,
-      title: "Manage",
+      title: "Natours",
       text:
         "This project required me to build a fully responsive" +
         "landing page to the designs provided. I used HTML5," +
@@ -45,11 +42,11 @@ function ProjectDetails() {
         "helping me to improve and adapt my style.",
     },
     {
-      slug: "bookmark",
+      slug: "nexter",
       mainImg: BookmarkProject,
       previewImg1: BookmarkProjectPreview1,
       previewImg2: BookmarkProjectPreview2,
-      title: "Bookmark",
+      title: "Nexter",
       text:
         "This project required me to build a fully" +
         "responsive landing page to the designs provided." +
@@ -68,11 +65,11 @@ function ProjectDetails() {
         "helping me to improve and adapt my style.",
     },
     {
-      slug: "insure",
+      slug: "trillo",
       mainImg: InsureProject,
       previewImg1: InsureProjectPreview1,
       previewImg2: InsureProjectPreview2,
-      title: "Insure",
+      title: "Trillo",
       text:
         "This was a small project which mostly" +
         "consisted of HTML and CSS. I built a" +
@@ -92,11 +89,11 @@ function ProjectDetails() {
         "helping me to improve and adapt my style.",
     },
     {
-      slug: "fylo",
-      mainImg: FyloProject,
-      previewImg1: FyloProjectPreview1,
-      previewImg2: FyloProjectPreview2,
-      title: "Fylo",
+      slug: "tems",
+      mainImg: InsureProject,
+      previewImg1: InsureProjectPreview1,
+      previewImg2: InsureProjectPreview2,
+      title: "TEMS",
       text:
         "This project was built in pure HTML and CSS." +
         "I had mobile and desktop designs to work to" +
