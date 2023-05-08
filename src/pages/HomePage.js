@@ -1,17 +1,26 @@
-import ImgPrincipal from '../assets/homepage/desktop/image-homepage-hero@2x.jpg';
+import ImgPrincipal from '../assets/homepage/desktop/image-homepage-hero@2x.png';
 import ImgPrincipalMobile from '../assets/homepage/mobile/image-homepage-hero@2x.jpg';
 import Arrows from '../assets/arrows.png';
 import Me from '../assets/me.jpg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ContactMeRow from '../components/ContactMeRow';
+import { useTranslation } from 'react-i18next';
 
 function HomePage() {
+    const { t, i18n } = useTranslation();
+    console.log(i18n.language);
+    const changeLanguageHandler = () => {
+        if(i18n.language === 'en-US'){
+            i18n.changeLanguage("pt-BR");
+        }else if(i18n.language === 'pt-BR'){
+            i18n.changeLanguage("en-US");
+        }
+    }
 
     let content;
 
     const isMobile = window.innerWidth < 768;
-
     const renderedResponsiveImgs = () => {
         return (
             <picture>
@@ -32,7 +41,7 @@ function HomePage() {
                     <div className="header__heading-box">
                         <h2
                             className="header__heading-text"
-                        >Hey, I'm Matheus Eli and I love building beautiful websites</h2>
+                        >{t('main-title')}</h2>
                         <div
                             className="header__heading-button">
                             <div className='header__arrows-box'>
@@ -54,12 +63,7 @@ function HomePage() {
                         className='about-me__text'
                     >
                         <h2 className='about-me__title'>About me</h2>
-                        <p>I’m a junior front-end developer looking for a new role in an exciting company.
-                            I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript.
-                            When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required.
-                            I’m based in São Paulo, BR, but I’m happy working remotely and have experience in remote teams.
-                            When I’m not coding, you’ll find me outdoors. I love being out in nature whether
-                            that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
+                        <p>{t('bio')}</p>
 
                         <Link to="/portfolio">
                             <button className='about-me__button'>Go to portfolio</button>
@@ -81,12 +85,13 @@ function HomePage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
                             className="header__heading-text"
-                        >Hey, I'm Matheus Eli and I love building beautiful websites</motion.h2>
+                        >{t('main-title')}</motion.h2>
                         <motion.div
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.3 }}
-                            className="header__heading-button">
+                            className="header__heading-button"
+                            onClick={changeLanguageHandler}>
                             <div className='header__arrows-box'>
                                 <img className='header__arrows-img' src={Arrows} alt="Button icon" />
                             </div>
@@ -112,12 +117,7 @@ function HomePage() {
                         className='about-me__text'
                     >
                         <h2 className='about-me__title'>About me</h2>
-                        <p>I’m a junior front-end developer looking for a new role in an exciting company.
-                            I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript.
-                            When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required.
-                            I’m based in São Paulo, BR, but I’m happy working remotely and have experience in remote teams.
-                            When I’m not coding, you’ll find me outdoors. I love being out in nature whether
-                            that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
+                        <p>{t('bio')}</p>
 
                         <Link to="/portfolio">
                             <button className='about-me__button'>Go to portfolio</button>

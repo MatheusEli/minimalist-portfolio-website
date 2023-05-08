@@ -10,6 +10,8 @@
   &__img-principal {
     width: 100%;
     object-fit: cover;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
 
     @include respond(tab-port) {
       height: 45vh;

@@ -2,12 +2,22 @@ import TrilloProject from '../assets/portfolio/desktop/trillo.png';
 import NatoursProject from '../assets/portfolio/desktop/natours.png';
 import NexterProject from '../assets/portfolio/desktop/nexter.png';
 import TemsProject from '../assets/portfolio/desktop/tems.png';
+import SosTemsProject from '../assets/portfolio/desktop/sostems.png';
 import ProjectsItem from './ProjectsItem';
 
 
 function ProjectsList() {
 
     const projects = [
+        {
+            slug: "sostems",
+            img: SosTemsProject,
+            title: "SOS TEMS",
+            text: "This project required me to build a fully responsive" +
+                "landing page to the designs provided. I used HTML5," +
+                "along with CSS Grid and JavaScript for the areas that" +
+                "required interactivity, such as the testimonial slider."
+        },
         {
             slug: "natours",
             img: NatoursProject,
